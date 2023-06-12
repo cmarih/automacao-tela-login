@@ -23,7 +23,7 @@
 `````
 
 <br>
-<h3>Instalar o Node, na versão atualizada:</h3>
+<p>Instalar o Node, na versão atualizada:</p>
 
 
 `````
@@ -31,17 +31,17 @@
 
 `````
 
-<h3>Ferramenta utilizada para o codigo é o: <strong>Visual Studio Code</strong></h3>
+<p>Ferramenta utilizada para o codigo é o: <strong>Visual Studio Code</strong></p>
 <br>
 
-<h3> Instalar o codeceptjs e o playwrite</h3>
+<p> Instalar o codeceptjs e o playwrite</p>
 
 `````
     npm install codeceptjs playwright --save
 
 `````
 
-<h3>Após baixar o projeto para a sua máquina local, e configura-la conforme informações acima, execute o comando abaixo no terminal para iniciar a validação dos testes.</h3>
+<p>Após baixar o projeto para a sua máquina local, e configura-la conforme informações acima, execute o comando abaixo no terminal para iniciar a validação dos testes.</p>
 
 `````
   npx codeceptjs run --steps
@@ -49,7 +49,7 @@
 `````
 
 
-<h3>Por conta da instalação do <strong>xvfb</strong>, o comando para startar os passos no WSL2:</h3>
+<p>Por conta da instalação do <strong>xvfb</strong>, o comando para startar os passos no WSL2:</p>
 
 `````
     xvfb-run -a npx codeceptjs run --steps
@@ -59,8 +59,8 @@
 <img src='/img/Screenshot_3.png'>
 
 <br>
-<h3>Caso queira executar apenas um passo dos testes, execute o comando abaixo, efetuando a troca da tag <strong><'@loginok'></strong>.</h3>
-<h3>Comando para executar uma tag especifica, sem precisar executar o codigo inteiro:</h3>
+<p>Caso queira executar apenas um passo dos testes, execute o comando abaixo, efetuando a troca da tag <strong><'@loginok'></strong>.</p>
+<p>Comando para executar uma tag especifica, sem precisar executar o codigo inteiro:</p>
 
 `````
     npx codeceptjs run --grep '@loginok'
@@ -70,9 +70,9 @@
 <br>
 <hr>
 <h2>Planejamento dos cenários utilizando GHERKIN</h2>
-<h3><strong>Feature: </strong> Login</h3>
+<p><strong>Feature: </strong> Login</p>
 <br>
-<h3><strong>Cenário  1: </strong> Login com sucesso </h3>
+<p><strong>Cenário  1: </strong> Login com sucesso </p>
 <p>
 DADO que o usuário esteja na tela de inicial do sistema
 
@@ -84,7 +84,7 @@ ENTÃO deve ser apresentado a tela de usuário logado
 </p>
 
 <br>
-<h3>Validação do passo:</h3>
+<p>Validação do passo:</p>
 
 `````
     npx codeceptjs run --grep '@loginok'
@@ -94,7 +94,7 @@ ENTÃO deve ser apresentado a tela de usuário logado
 
 <br>
 
-<h3><strong>Cenário  2: </strong> Tentando Logar digitando apenas o e-mail </h3>
+<p><strong>Cenário  2: </strong> Tentando Logar digitando apenas o e-mail </p>
 <p>
 DADO que o usuário esteja na tela de inicial do sistema
 
@@ -106,7 +106,7 @@ ENTÃO deve ser apresentada a mensagem “Senha inválida.”
 </p>
 
 <br>
-<h3>Validação do passo:</h3>
+<p>Validação do passo:</p>
 
 `````
     npx codeceptjs run --grep '@sem-email'
@@ -116,7 +116,7 @@ ENTÃO deve ser apresentada a mensagem “Senha inválida.”
 
 <br>
 
-<h3><strong>Cenário  3: </strong> Tentando logar sem digitar e-mail e senha </h3>
+<p><strong>Cenário  3: </strong> Tentando logar sem digitar e-mail e senha </p>
 <p>
 DADO que o usuário esteja na tela de inicial do sistema
 
@@ -128,7 +128,7 @@ ENTÃO deve ser apresentada a mensagem “E-mail inválido.”
 </p>
 
 <br>
-<h3>Validação do passo:</h3>
+<p>Validação do passo:</p>
 
 `````
     npx codeceptjs run --grep '@sememailesenha'
@@ -138,7 +138,7 @@ ENTÃO deve ser apresentada a mensagem “E-mail inválido.”
 
 <br>
 
-<h3><strong>Cenário  4: </strong> Tentando Logar digitando apenas a senha </h3>
+<p><strong>Cenário  4: </strong> Tentando Logar digitando apenas a senha </p>
 <p>
 DADO que o usuário esteja na tela de inicial do sistema
 
@@ -150,7 +150,7 @@ ENTÃO deve ser apresentada a mensagem “E-mail inválido.”
 </p>
 
 <br>
-<h3>Validação do passo:</h3>
+<p>Validação do passo:</p>
 
 `````
     npx codeceptjs run --grep '@apenassenha'
